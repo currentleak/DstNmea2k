@@ -13,8 +13,10 @@ namespace WindowsFormsAppKcoTestSsh
     {
         private Graphics MonDessin = null;
         private Color CouleurDeFond = Color.White;
-        Image ImgCompass;
-        Image ImgHeading;
+
+        Image ImgCompass = WindowsFormsAppKcoTestSsh.Properties.Resources.compass;
+        Image ImgHeading = WindowsFormsAppKcoTestSsh.Properties.Resources.heading;
+
         Rectangle RectCompass, RectHeading, RectClip;
 
         public GraphCompass(PictureBox picBox)
@@ -23,11 +25,9 @@ namespace WindowsFormsAppKcoTestSsh
             MonDessin.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             CouleurDeFond = picBox.BackColor;
 
-           // WindowsFormsAppKcoTestSsh.Properties.Resources.compass;
-            
             //ImgCompass = Image.FromFile();
-            ImgCompass = Image.FromFile("../../Resources/compass.png");
-            ImgHeading = Image.FromFile("../../Resources/heading.png");
+            //ImgCompass = Image.FromFile("../../Resources/compass.png");
+            //ImgHeading = Image.FromFile("../../Resources/heading.png");
             //Point p = new Point(0, 0);
             //p.X = picBox.Size.Width/2;
             //p.Y = picBox.Size.Height/2;

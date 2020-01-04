@@ -44,22 +44,18 @@
             this.radioButtonM = new System.Windows.Forms.RadioButton();
             this.radioButtonP = new System.Windows.Forms.RadioButton();
             this.labelDepth = new System.Windows.Forms.Label();
-            this.pictureBoxAngle = new System.Windows.Forms.PictureBox();
-            this.pictureBoxMagneto = new System.Windows.Forms.PictureBox();
             this.groupBoxDST = new System.Windows.Forms.GroupBox();
-            this.pictureBaro = new System.Windows.Forms.PictureBox();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.labelHeading = new System.Windows.Forms.Label();
             this.labelRoll = new System.Windows.Forms.Label();
             this.labelPressure = new System.Windows.Forms.Label();
+            this.pictureBoxAngle = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMagneto = new System.Windows.Forms.PictureBox();
             this.groupBoxTemp.SuspendLayout();
             this.groupBoxSpeed.SuspendLayout();
             this.groupBoxDepth.SuspendLayout();
+            this.groupBoxDST.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMagneto)).BeginInit();
-            this.groupBoxDST.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBaro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxTemp
@@ -250,25 +246,6 @@
             this.labelDepth.TabIndex = 0;
             this.labelDepth.Text = "000.0";
             // 
-            // pictureBoxAngle
-            // 
-            this.pictureBoxAngle.Location = new System.Drawing.Point(379, 498);
-            this.pictureBoxAngle.Name = "pictureBoxAngle";
-            this.pictureBoxAngle.Size = new System.Drawing.Size(504, 236);
-            this.pictureBoxAngle.TabIndex = 0;
-            this.pictureBoxAngle.TabStop = false;
-            this.pictureBoxAngle.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBoxAngle_Paint);
-            // 
-            // pictureBoxMagneto
-            // 
-            this.pictureBoxMagneto.InitialImage = null;
-            this.pictureBoxMagneto.Location = new System.Drawing.Point(379, 2);
-            this.pictureBoxMagneto.Name = "pictureBoxMagneto";
-            this.pictureBoxMagneto.Size = new System.Drawing.Size(732, 732);
-            this.pictureBoxMagneto.TabIndex = 13;
-            this.pictureBoxMagneto.TabStop = false;
-            this.pictureBoxMagneto.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBoxMagneto_Paint);
-            // 
             // groupBoxDST
             // 
             this.groupBoxDST.Controls.Add(this.groupBoxTemp);
@@ -279,24 +256,6 @@
             this.groupBoxDST.Size = new System.Drawing.Size(374, 446);
             this.groupBoxDST.TabIndex = 17;
             this.groupBoxDST.TabStop = false;
-            // 
-            // pictureBaro
-            // 
-            this.pictureBaro.Location = new System.Drawing.Point(888, 498);
-            this.pictureBaro.Name = "pictureBaro";
-            this.pictureBaro.Size = new System.Drawing.Size(206, 205);
-            this.pictureBaro.TabIndex = 18;
-            this.pictureBaro.TabStop = false;
-            // 
-            // trackBar1
-            // 
-            this.trackBar1.Location = new System.Drawing.Point(52, 469);
-            this.trackBar1.Maximum = 360;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar1.Size = new System.Drawing.Size(45, 104);
-            this.trackBar1.TabIndex = 19;
-            this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
             // 
             // labelHeading
             // 
@@ -312,7 +271,7 @@
             // 
             this.labelRoll.AutoSize = true;
             this.labelRoll.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRoll.Location = new System.Drawing.Point(383, 695);
+            this.labelRoll.Location = new System.Drawing.Point(384, 693);
             this.labelRoll.Name = "labelRoll";
             this.labelRoll.Size = new System.Drawing.Size(92, 39);
             this.labelRoll.TabIndex = 21;
@@ -322,23 +281,43 @@
             // 
             this.labelPressure.AutoSize = true;
             this.labelPressure.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPressure.Location = new System.Drawing.Point(889, 704);
+            this.labelPressure.Location = new System.Drawing.Point(50, 480);
             this.labelPressure.Name = "labelPressure";
             this.labelPressure.Size = new System.Drawing.Size(121, 29);
             this.labelPressure.TabIndex = 22;
             this.labelPressure.Text = "101.1hPa";
+            // 
+            // pictureBoxAngle
+            // 
+            this.pictureBoxAngle.BackgroundImage = global::WindowsFormsAppKcoTestSsh.Properties.Resources.niveau;
+            this.pictureBoxAngle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxAngle.Location = new System.Drawing.Point(380, 426);
+            this.pictureBoxAngle.Name = "pictureBoxAngle";
+            this.pictureBoxAngle.Size = new System.Drawing.Size(732, 306);
+            this.pictureBoxAngle.TabIndex = 0;
+            this.pictureBoxAngle.TabStop = false;
+            this.pictureBoxAngle.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBoxAngle_Paint);
+            // 
+            // pictureBoxMagneto
+            // 
+            this.pictureBoxMagneto.Image = global::WindowsFormsAppKcoTestSsh.Properties.Resources.compass;
+            this.pictureBoxMagneto.InitialImage = null;
+            this.pictureBoxMagneto.Location = new System.Drawing.Point(380, 0);
+            this.pictureBoxMagneto.Name = "pictureBoxMagneto";
+            this.pictureBoxMagneto.Size = new System.Drawing.Size(732, 732);
+            this.pictureBoxMagneto.TabIndex = 13;
+            this.pictureBoxMagneto.TabStop = false;
+            this.pictureBoxMagneto.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBoxMagneto_Paint);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 781);
-            this.Controls.Add(this.labelPressure);
-            this.Controls.Add(this.labelHeading);
             this.Controls.Add(this.labelRoll);
             this.Controls.Add(this.pictureBoxAngle);
-            this.Controls.Add(this.trackBar1);
-            this.Controls.Add(this.pictureBaro);
+            this.Controls.Add(this.labelPressure);
+            this.Controls.Add(this.labelHeading);
             this.Controls.Add(this.groupBoxDST);
             this.Controls.Add(this.pictureBoxMagneto);
             this.DoubleBuffered = true;
@@ -358,11 +337,9 @@
             this.groupBoxSpeed.PerformLayout();
             this.groupBoxDepth.ResumeLayout(false);
             this.groupBoxDepth.PerformLayout();
+            this.groupBoxDST.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMagneto)).EndInit();
-            this.groupBoxDST.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBaro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,8 +365,6 @@
         private System.Windows.Forms.PictureBox pictureBoxAngle;
         private System.Windows.Forms.PictureBox pictureBoxMagneto;
         private System.Windows.Forms.GroupBox groupBoxDST;
-        private System.Windows.Forms.PictureBox pictureBaro;
-        private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Label labelHeading;
         private System.Windows.Forms.Label labelRoll;
         private System.Windows.Forms.Label labelPressure;

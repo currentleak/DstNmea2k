@@ -17,8 +17,7 @@ namespace WindowsFormsAppKcoTestSsh
         private Size BulleSize = new Size(20, 20);
         private Point BullePos = new Point(0, 0);
 
-        Image ImgRoll;
-        //Image ImgHeading;
+        Image ImgRoll = WindowsFormsAppKcoTestSsh.Properties.Resources.niveau;
         Rectangle RectRoll;
 
         public GraphAngle(PictureBox picBox)
@@ -26,7 +25,7 @@ namespace WindowsFormsAppKcoTestSsh
             MonDessin = picBox.CreateGraphics();
             MonDessin.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             CouleurDeFond = picBox.BackColor;
-            ImgRoll = Image.FromFile("../../Resources/niveau.jpg");
+
             RectRoll = new Rectangle(0, 0, picBox.Size.Width, picBox.Size.Height);
             
             //MonDessin.Clip = new Region(RectClip);

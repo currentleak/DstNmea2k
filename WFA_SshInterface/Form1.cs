@@ -25,7 +25,6 @@ namespace WindowsFormsAppKcoTestSsh
             InitializeComponent();
             GCompass = new GraphCompass(pictureBoxMagneto);
             GAngle = new GraphAngle(pictureBoxAngle);
-            //GraphLevel = new BbblueGraphLevel(pictureBoxAngle);
             MonLienSecure = new SshClient(address, user, password);
 
             MonDeviceDST.DstData.value = 0.0;
@@ -57,8 +56,8 @@ namespace WindowsFormsAppKcoTestSsh
             //this.DoubleBuffered = true;
             //SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
 
-            GCompass.DessineLeFond();
-            GAngle.DessineLeFond();
+            //GCompass.DessineLeFond();
+            //GAngle.DessineLeFond();
             //pictureBoxMagneto.Refresh();
         }
 
