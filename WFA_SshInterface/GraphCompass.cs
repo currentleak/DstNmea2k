@@ -22,8 +22,12 @@ namespace WindowsFormsAppKcoTestSsh
             MonDessin = picBox.CreateGraphics();
             MonDessin.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             CouleurDeFond = picBox.BackColor;
-            ImgCompass = Image.FromFile("compass.png");
-            ImgHeading = Image.FromFile("heading.png");
+
+           // WindowsFormsAppKcoTestSsh.Properties.Resources.compass;
+            
+            //ImgCompass = Image.FromFile();
+            ImgCompass = Image.FromFile("../../Resources/compass.png");
+            ImgHeading = Image.FromFile("../../Resources/heading.png");
             //Point p = new Point(0, 0);
             //p.X = picBox.Size.Width/2;
             //p.Y = picBox.Size.Height/2;
