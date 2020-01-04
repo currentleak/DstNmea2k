@@ -9,6 +9,9 @@ namespace WindowsFormsAppKcoTestSsh
     };
     class DstN2k
     {
+        //public const string CanBusId = "vcan0";
+        //public const string CanBusId = "can0";
+
         const UInt32 PGN128259_SPEED = 0x09F50323; // 128259 = 0x1F503
         const UInt32 PGN128267_DEPTH = 0x0DF50B23;
         const UInt32 PGN128275_DISTLOG = 0x19F51323;

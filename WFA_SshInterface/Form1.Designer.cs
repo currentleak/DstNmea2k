@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBoxTemp = new System.Windows.Forms.GroupBox();
             this.radioButtonC = new System.Windows.Forms.RadioButton();
             this.labelTemp = new System.Windows.Forms.Label();
@@ -258,6 +257,7 @@
             this.pictureBoxAngle.Size = new System.Drawing.Size(504, 236);
             this.pictureBoxAngle.TabIndex = 0;
             this.pictureBoxAngle.TabStop = false;
+            this.pictureBoxAngle.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBoxAngle_Paint);
             // 
             // pictureBoxMagneto
             // 
@@ -282,7 +282,6 @@
             // 
             // pictureBaro
             // 
-            this.pictureBaro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBaro.BackgroundImage")));
             this.pictureBaro.Location = new System.Drawing.Point(888, 498);
             this.pictureBaro.Name = "pictureBaro";
             this.pictureBaro.Size = new System.Drawing.Size(206, 205);

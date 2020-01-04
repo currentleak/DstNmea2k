@@ -48,8 +48,8 @@ namespace WindowsFormsAppKcoTestSsh
             if (MonLienSecure.IsConnected)
             {
                 // config CAN bus and start it
-                new Task(() => CanDump(MonLienSecure, "candump can0")).Start();
-                //new Task(() => CanDump(MonLienSecure, "candump vcan0")).Start();
+                //new Task(() => CanDump(MonLienSecure, "candump can0")).Start();
+                new Task(() => CanDump(MonLienSecure, "candump vcan0")).Start();
                 Console.WriteLine("CAN dump running");
             }
             Cursor.Current = Cursors.Default;
@@ -125,11 +125,17 @@ namespace WindowsFormsAppKcoTestSsh
         private void pictureBoxMagneto_Paint(object sender, PaintEventArgs e)
         {
             //GCompass.DessineLeFond((float)trackBar1.Value);
+            GCompass.DessineLeFond();
         }
 
         private void trackBar1_ValueChanged(object sender, EventArgs e)
         {
             //GCompass.DessineLeFond((float)trackBar1.Value);
+        }
+
+        private void pictureBoxAngle_Paint(object sender, PaintEventArgs e)
+        {
+            GAngle.DessineLeFond();
         }
     }
 
