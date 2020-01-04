@@ -97,7 +97,7 @@ namespace WindowsFormsAppKcoTestSsh
                 MessageN2k = GetN2kData(MessageN2k).Substring(4, 2) + GetN2kData(MessageN2k).Substring(2, 2);
                 int h = int.Parse(MessageN2k, System.Globalization.NumberStyles.HexNumber);
                 double heading = (double)h * 0.0001;
-                heading = heading * 360 / 2 * Math.PI;
+                heading = heading * 180 * Math.PI;
                 DstData.value = heading;
                 return String.Format("{0:#.0000}", heading);
             }
@@ -107,7 +107,7 @@ namespace WindowsFormsAppKcoTestSsh
                 MessageN2k = GetN2kData(MessageN2k).Substring(12, 2) + GetN2kData(MessageN2k).Substring(10, 2);
                 int r = int.Parse(MessageN2k, System.Globalization.NumberStyles.HexNumber);
                 double roll = (double)r * 0.0001;
-                roll = roll * 360 / 2 * Math.PI;
+                roll = roll * 180 / Math.PI;
                 DstData.value = roll;
                 return String.Format("{0:#.0000}", roll);
             }

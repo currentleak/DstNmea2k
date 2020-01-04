@@ -25,27 +25,22 @@ namespace WindowsFormsAppKcoTestSsh
             MonDessin.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             CouleurDeFond = picBox.BackColor;
 
-            //ImgCompass = Image.FromFile();
-            //ImgCompass = Image.FromFile("../../Resources/compass.png");
-            //ImgHeading = Image.FromFile("../../Resources/heading.png");
-            //Point p = new Point(0, 0);
-            //p.X = picBox.Size.Width/2;
-            //p.Y = picBox.Size.Height/2;
             RectCompass = new Rectangle(0, 0, picBox.Size.Width, picBox.Size.Height);
             RectHeading = new Rectangle(0, 100, picBox.Size.Width, picBox.Size.Height);
             RectClip = new Rectangle(0, 0, picBox.Size.Width, picBox.Size.Height/2 + 50);
             MonDessin.Clip = new Region(RectClip);
-
         }
 
         public void DessineLeFond()
         {
+            MonDessin.Clear(CouleurDeFond);
             MonDessin.DrawImage(ImgCompass, RectCompass);
             MonDessin.DrawImage(ImgHeading, RectHeading);
         }
         public void DessineLeFond(double angle)
         {
             MonDessin.Clear(CouleurDeFond);
+
             MonDessin.TranslateTransform((float)ImgCompass.Width / 2, (float)ImgCompass.Height / 2);
             MonDessin.RotateTransform((float)angle);
             MonDessin.TranslateTransform(-(float)ImgCompass.Width / 2, -(float)ImgCompass.Height / 2);

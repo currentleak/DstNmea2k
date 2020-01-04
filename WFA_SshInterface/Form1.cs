@@ -26,7 +26,6 @@ namespace WindowsFormsAppKcoTestSsh
             GCompass = new GraphCompass(pictureBoxMagneto);
             GAngle = new GraphAngle(pictureBoxAngle);
             MonLienSecure = new SshClient(address, user, password);
-
             MonDeviceDST.DstData.value = 0.0;
             MonDeviceDST.DstData.parameter = String.Empty;
         }
@@ -46,10 +45,11 @@ namespace WindowsFormsAppKcoTestSsh
             Console.WriteLine("SSH connection done");
             if (MonLienSecure.IsConnected)
             {
-                // config CAN bus and start it
+                // **** config CAN bus and start it    ************************** //
                 //new Task(() => CanDump(MonLienSecure, "candump can0")).Start();
+                //Console.WriteLine("Real CAN0 dump running");
                 new Task(() => CanDump(MonLienSecure, "candump vcan0")).Start();
-                Console.WriteLine("CAN dump running");
+                Console.WriteLine("Virtual CAN dump running");
             }
             Cursor.Current = Cursors.Default;
 
@@ -60,7 +60,6 @@ namespace WindowsFormsAppKcoTestSsh
             //GAngle.DessineLeFond();
             //pictureBoxMagneto.Refresh();
         }
-
 
         private void CanDump(SshClient LienSsh, String commande)
         {
@@ -89,7 +88,7 @@ namespace WindowsFormsAppKcoTestSsh
                         }
                         else if (MonDeviceDST.DstData.parameter == "Heading")
                         {
-                            labelHeading.Invoke((MethodInvoker)(() => labelHeading.Text = String.Format("{0:#000.00}", MonDeviceDST.DstData.value) + "°"));
+                            labelHeading.Invoke((MethodInvoker)(() => labelHeading.Text = String.Format("{0:#000.0}", MonDeviceDST.DstData.value) + "°"));
                             GCompass.DessineLeFond(MonDeviceDST.DstData.value);
                         }
                         else if (MonDeviceDST.DstData.parameter == "AttitudeRoll")
@@ -110,7 +109,6 @@ namespace WindowsFormsAppKcoTestSsh
             MaCommande.EndExecute(Resultat);
         }
 
-
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             //pictureBoxMagneto.Refresh();
@@ -125,11 +123,6 @@ namespace WindowsFormsAppKcoTestSsh
         {
             //GCompass.DessineLeFond((float)trackBar1.Value);
             GCompass.DessineLeFond();
-        }
-
-        private void trackBar1_ValueChanged(object sender, EventArgs e)
-        {
-            //GCompass.DessineLeFond((float)trackBar1.Value);
         }
 
         private void pictureBoxAngle_Paint(object sender, PaintEventArgs e)

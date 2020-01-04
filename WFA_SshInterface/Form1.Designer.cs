@@ -50,6 +50,7 @@
             this.labelPressure = new System.Windows.Forms.Label();
             this.pictureBoxAngle = new System.Windows.Forms.PictureBox();
             this.pictureBoxMagneto = new System.Windows.Forms.PictureBox();
+            this.labelPressureTitle = new System.Windows.Forms.Label();
             this.groupBoxTemp.SuspendLayout();
             this.groupBoxSpeed.SuspendLayout();
             this.groupBoxDepth.SuspendLayout();
@@ -63,9 +64,9 @@
             this.groupBoxTemp.Controls.Add(this.radioButtonC);
             this.groupBoxTemp.Controls.Add(this.labelTemp);
             this.groupBoxTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxTemp.Location = new System.Drawing.Point(8, 339);
+            this.groupBoxTemp.Location = new System.Drawing.Point(8, 324);
             this.groupBoxTemp.Name = "groupBoxTemp";
-            this.groupBoxTemp.Size = new System.Drawing.Size(357, 100);
+            this.groupBoxTemp.Size = new System.Drawing.Size(333, 100);
             this.groupBoxTemp.TabIndex = 6;
             this.groupBoxTemp.TabStop = false;
             this.groupBoxTemp.Text = "WATER TEMPERATURE";
@@ -75,7 +76,7 @@
             this.radioButtonC.AutoSize = true;
             this.radioButtonC.Checked = true;
             this.radioButtonC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonC.Location = new System.Drawing.Point(294, 31);
+            this.radioButtonC.Location = new System.Drawing.Point(234, 31);
             this.radioButtonC.Name = "radioButtonC";
             this.radioButtonC.Size = new System.Drawing.Size(39, 24);
             this.radioButtonC.TabIndex = 9;
@@ -86,10 +87,10 @@
             // labelTemp
             // 
             this.labelTemp.AutoSize = true;
-            this.labelTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTemp.Location = new System.Drawing.Point(11, 39);
+            this.labelTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTemp.Location = new System.Drawing.Point(22, 31);
             this.labelTemp.Name = "labelTemp";
-            this.labelTemp.Size = new System.Drawing.Size(84, 37);
+            this.labelTemp.Size = new System.Drawing.Size(110, 51);
             this.labelTemp.TabIndex = 3;
             this.labelTemp.Text = "00.0";
             // 
@@ -102,9 +103,9 @@
             this.groupBoxSpeed.Controls.Add(this.labelSpeed);
             this.groupBoxSpeed.Controls.Add(this.labelDLog);
             this.groupBoxSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxSpeed.Location = new System.Drawing.Point(8, 217);
+            this.groupBoxSpeed.Location = new System.Drawing.Point(8, 202);
             this.groupBoxSpeed.Name = "groupBoxSpeed";
-            this.groupBoxSpeed.Size = new System.Drawing.Size(357, 116);
+            this.groupBoxSpeed.Size = new System.Drawing.Size(333, 116);
             this.groupBoxSpeed.TabIndex = 5;
             this.groupBoxSpeed.TabStop = false;
             this.groupBoxSpeed.Text = "SPEED";
@@ -158,10 +159,10 @@
             // labelSpeed
             // 
             this.labelSpeed.AutoSize = true;
-            this.labelSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSpeed.Location = new System.Drawing.Point(22, 30);
             this.labelSpeed.Name = "labelSpeed";
-            this.labelSpeed.Size = new System.Drawing.Size(58, 26);
+            this.labelSpeed.Size = new System.Drawing.Size(110, 51);
             this.labelSpeed.TabIndex = 1;
             this.labelSpeed.Text = "00.0";
             // 
@@ -185,7 +186,7 @@
             this.groupBoxDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxDepth.Location = new System.Drawing.Point(8, 10);
             this.groupBoxDepth.Name = "groupBoxDepth";
-            this.groupBoxDepth.Size = new System.Drawing.Size(357, 207);
+            this.groupBoxDepth.Size = new System.Drawing.Size(333, 186);
             this.groupBoxDepth.TabIndex = 4;
             this.groupBoxDepth.TabStop = false;
             this.groupBoxDepth.Text = "DEPTH";
@@ -194,7 +195,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(245, 177);
+            this.radioButton1.Location = new System.Drawing.Point(234, 151);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(88, 24);
             this.radioButton1.TabIndex = 4;
@@ -205,7 +206,7 @@
             // 
             this.radioButtonN.AutoSize = true;
             this.radioButtonN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonN.Location = new System.Drawing.Point(171, 177);
+            this.radioButtonN.Location = new System.Drawing.Point(155, 151);
             this.radioButtonN.Name = "radioButtonN";
             this.radioButtonN.Size = new System.Drawing.Size(73, 24);
             this.radioButtonN.TabIndex = 3;
@@ -217,7 +218,7 @@
             this.radioButtonM.AutoSize = true;
             this.radioButtonM.Checked = true;
             this.radioButtonM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonM.Location = new System.Drawing.Point(92, 177);
+            this.radioButtonM.Location = new System.Drawing.Point(77, 151);
             this.radioButtonM.Name = "radioButtonM";
             this.radioButtonM.Size = new System.Drawing.Size(73, 24);
             this.radioButtonM.TabIndex = 2;
@@ -229,7 +230,7 @@
             // 
             this.radioButtonP.AutoSize = true;
             this.radioButtonP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonP.Location = new System.Drawing.Point(26, 177);
+            this.radioButtonP.Location = new System.Drawing.Point(7, 151);
             this.radioButtonP.Name = "radioButtonP";
             this.radioButtonP.Size = new System.Drawing.Size(64, 24);
             this.radioButtonP.TabIndex = 1;
@@ -239,10 +240,10 @@
             // labelDepth
             // 
             this.labelDepth.AutoSize = true;
-            this.labelDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDepth.Location = new System.Drawing.Point(30, 45);
+            this.labelDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDepth.Location = new System.Drawing.Point(5, 28);
             this.labelDepth.Name = "labelDepth";
-            this.labelDepth.Size = new System.Drawing.Size(289, 108);
+            this.labelDepth.Size = new System.Drawing.Size(325, 120);
             this.labelDepth.TabIndex = 0;
             this.labelDepth.Text = "000.0";
             // 
@@ -251,9 +252,9 @@
             this.groupBoxDST.Controls.Add(this.groupBoxTemp);
             this.groupBoxDST.Controls.Add(this.groupBoxSpeed);
             this.groupBoxDST.Controls.Add(this.groupBoxDepth);
-            this.groupBoxDST.Location = new System.Drawing.Point(-1, 0);
+            this.groupBoxDST.Location = new System.Drawing.Point(12, 2);
             this.groupBoxDST.Name = "groupBoxDST";
-            this.groupBoxDST.Size = new System.Drawing.Size(374, 446);
+            this.groupBoxDST.Size = new System.Drawing.Size(352, 434);
             this.groupBoxDST.TabIndex = 17;
             this.groupBoxDST.TabStop = false;
             // 
@@ -261,7 +262,7 @@
             // 
             this.labelHeading.AutoSize = true;
             this.labelHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHeading.Location = new System.Drawing.Point(967, 2);
+            this.labelHeading.Location = new System.Drawing.Point(957, 2);
             this.labelHeading.Name = "labelHeading";
             this.labelHeading.Size = new System.Drawing.Size(170, 73);
             this.labelHeading.TabIndex = 20;
@@ -271,7 +272,7 @@
             // 
             this.labelRoll.AutoSize = true;
             this.labelRoll.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRoll.Location = new System.Drawing.Point(384, 693);
+            this.labelRoll.Location = new System.Drawing.Point(374, 693);
             this.labelRoll.Name = "labelRoll";
             this.labelRoll.Size = new System.Drawing.Size(92, 39);
             this.labelRoll.TabIndex = 21;
@@ -281,7 +282,7 @@
             // 
             this.labelPressure.AutoSize = true;
             this.labelPressure.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPressure.Location = new System.Drawing.Point(50, 480);
+            this.labelPressure.Location = new System.Drawing.Point(81, 455);
             this.labelPressure.Name = "labelPressure";
             this.labelPressure.Size = new System.Drawing.Size(121, 29);
             this.labelPressure.TabIndex = 22;
@@ -291,7 +292,7 @@
             // 
             this.pictureBoxAngle.BackgroundImage = global::WindowsFormsAppKcoTestSsh.Properties.Resources.niveau;
             this.pictureBoxAngle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxAngle.Location = new System.Drawing.Point(380, 426);
+            this.pictureBoxAngle.Location = new System.Drawing.Point(370, 426);
             this.pictureBoxAngle.Name = "pictureBoxAngle";
             this.pictureBoxAngle.Size = new System.Drawing.Size(732, 306);
             this.pictureBoxAngle.TabIndex = 0;
@@ -302,18 +303,28 @@
             // 
             this.pictureBoxMagneto.Image = global::WindowsFormsAppKcoTestSsh.Properties.Resources.compass;
             this.pictureBoxMagneto.InitialImage = null;
-            this.pictureBoxMagneto.Location = new System.Drawing.Point(380, 0);
+            this.pictureBoxMagneto.Location = new System.Drawing.Point(370, 0);
             this.pictureBoxMagneto.Name = "pictureBoxMagneto";
             this.pictureBoxMagneto.Size = new System.Drawing.Size(732, 732);
             this.pictureBoxMagneto.TabIndex = 13;
             this.pictureBoxMagneto.TabStop = false;
             this.pictureBoxMagneto.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBoxMagneto_Paint);
             // 
+            // labelPressureTitle
+            // 
+            this.labelPressureTitle.AutoSize = true;
+            this.labelPressureTitle.Location = new System.Drawing.Point(27, 455);
+            this.labelPressureTitle.Name = "labelPressureTitle";
+            this.labelPressureTitle.Size = new System.Drawing.Size(48, 13);
+            this.labelPressureTitle.TabIndex = 23;
+            this.labelPressureTitle.Text = "Pressure";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 781);
+            this.ClientSize = new System.Drawing.Size(1104, 741);
+            this.Controls.Add(this.labelPressureTitle);
             this.Controls.Add(this.labelRoll);
             this.Controls.Add(this.pictureBoxAngle);
             this.Controls.Add(this.labelPressure);
@@ -324,8 +335,8 @@
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1300, 820);
-            this.MinimumSize = new System.Drawing.Size(1300, 820);
+            this.MaximumSize = new System.Drawing.Size(1120, 780);
+            this.MinimumSize = new System.Drawing.Size(1120, 780);
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = " ";
@@ -368,6 +379,7 @@
         private System.Windows.Forms.Label labelHeading;
         private System.Windows.Forms.Label labelRoll;
         private System.Windows.Forms.Label labelPressure;
+        private System.Windows.Forms.Label labelPressureTitle;
     }
 }
 
