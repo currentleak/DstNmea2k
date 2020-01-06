@@ -9,15 +9,14 @@ namespace WindowsFormsAppKcoTestSsh
     };
     class DstN2k
     {
-        //public const string CanBusId = "vcan0";
+        public string CanBusId = "vcan0";
         //public const string CanBusId = "can0";
 
         const UInt32 PGN128259_SPEED = 0x09F50323; // 128259 = 0x1F503
         const UInt32 PGN128267_DEPTH = 0x0DF50B23;
         const UInt32 PGN128275_DISTLOG = 0x19F51323;
         const UInt32 PGN130311_WTEMP = 0x15FD0723;
-        // todo a verfier les  PGN heading, Attitude...
-        
+        // todo a verfier les  PGN heading, Attitude...       
         const UInt32 PGN127250_HEADING = 0x01F11223;   // 127250 = 0x1F112 --> 0x??F11223
         const UInt32 PGN127257_ATTITUDE = 0x01F11923;
         const UInt32 PGN130310_PRESSURE = 0x01FD0623;
@@ -97,7 +96,7 @@ namespace WindowsFormsAppKcoTestSsh
                 MessageN2k = GetN2kData(MessageN2k).Substring(4, 2) + GetN2kData(MessageN2k).Substring(2, 2);
                 int h = int.Parse(MessageN2k, System.Globalization.NumberStyles.HexNumber);
                 double heading = (double)h * 0.0001;
-                heading = heading * 180 * Math.PI;
+                heading = heading * 180 / Math.PI;
                 DstData.value = heading;
                 return String.Format("{0:#.0000}", heading);
             }

@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsAppKcoTestSsh
@@ -14,15 +11,15 @@ namespace WindowsFormsAppKcoTestSsh
         private Graphics MonDessin = null;
         private Color CouleurDeFond = Color.White;
 
-        Image ImgCompass = WindowsFormsAppKcoTestSsh.Properties.Resources.compass;
-        Image ImgHeading = WindowsFormsAppKcoTestSsh.Properties.Resources.heading;
+        Image ImgCompass = Properties.Resources.compass;
+        Image ImgHeading = Properties.Resources.heading;
 
         Rectangle RectCompass, RectHeading, RectClip;
 
         public GraphCompass(PictureBox picBox)
         {
             MonDessin = picBox.CreateGraphics();
-            MonDessin.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            MonDessin.SmoothingMode = SmoothingMode.AntiAlias;
             CouleurDeFond = picBox.BackColor;
 
             RectCompass = new Rectangle(0, 0, picBox.Size.Width, picBox.Size.Height);
@@ -40,7 +37,6 @@ namespace WindowsFormsAppKcoTestSsh
         public void DessineLeFond(double angle)
         {
             MonDessin.Clear(CouleurDeFond);
-
             MonDessin.TranslateTransform((float)ImgCompass.Width / 2, (float)ImgCompass.Height / 2);
             MonDessin.RotateTransform((float)angle);
             MonDessin.TranslateTransform(-(float)ImgCompass.Width / 2, -(float)ImgCompass.Height / 2);

@@ -261,12 +261,14 @@
             // labelHeading
             // 
             this.labelHeading.AutoSize = true;
+            this.labelHeading.BackColor = System.Drawing.SystemColors.Control;
             this.labelHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHeading.Location = new System.Drawing.Point(957, 2);
+            this.labelHeading.Location = new System.Drawing.Point(876, 0);
+            this.labelHeading.Margin = new System.Windows.Forms.Padding(0);
             this.labelHeading.Name = "labelHeading";
-            this.labelHeading.Size = new System.Drawing.Size(170, 73);
+            this.labelHeading.Size = new System.Drawing.Size(226, 73);
             this.labelHeading.TabIndex = 20;
-            this.labelHeading.Text = "180°";
+            this.labelHeading.Text = "359.0°";
             // 
             // labelRoll
             // 
@@ -290,7 +292,6 @@
             // 
             // pictureBoxAngle
             // 
-            this.pictureBoxAngle.BackgroundImage = global::WindowsFormsAppKcoTestSsh.Properties.Resources.niveau;
             this.pictureBoxAngle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxAngle.Location = new System.Drawing.Point(370, 426);
             this.pictureBoxAngle.Name = "pictureBoxAngle";

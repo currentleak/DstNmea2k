@@ -14,9 +14,8 @@ namespace WindowsFormsAppKcoTestSsh
         private const string user = "debian";
         private const string password = "temppwd";
 
-        private SshClient MonLienSecure = null;
-
-        private static DstN2k MonDeviceDST = new DstN2k();
+        private static SshClient MonLienSecure = null;
+        private static DstN2k MonDeviceDST = null;
         private static GraphCompass GCompass = null;
         private static GraphAngle GAngle = null;
 
@@ -26,6 +25,7 @@ namespace WindowsFormsAppKcoTestSsh
             GCompass = new GraphCompass(pictureBoxMagneto);
             GAngle = new GraphAngle(pictureBoxAngle);
             MonLienSecure = new SshClient(address, user, password);
+            MonDeviceDST = new DstN2k();
             MonDeviceDST.DstData.value = 0.0;
             MonDeviceDST.DstData.parameter = String.Empty;
         }
@@ -44,12 +44,22 @@ namespace WindowsFormsAppKcoTestSsh
             }
             Console.WriteLine("SSH connection done");
             if (MonLienSecure.IsConnected)
-            {
+            {  
                 // **** config CAN bus and start it    ************************** //
-                //new Task(() => CanDump(MonLienSecure, "candump can0")).Start();
-                //Console.WriteLine("Real CAN0 dump running");
-                new Task(() => CanDump(MonLienSecure, "candump vcan0")).Start();
-                Console.WriteLine("Virtual CAN dump running");
+                if(MonDeviceDST.CanBusId == "can0")
+                {
+                    new Task(() => CanDump(MonLienSecure, "candump can0")).Start();
+                }
+                else if (MonDeviceDST.CanBusId == "vcan0")
+                {
+                    new Task(() => CanDump(MonLienSecure, "candump vcan0")).Start();
+                }
+                else
+                {
+                    Console.WriteLine("CAN dump error.");
+                    return;
+                }
+                Console.WriteLine("CAN dump running.");
             }
             Cursor.Current = Cursors.Default;
 
@@ -100,7 +110,7 @@ namespace WindowsFormsAppKcoTestSsh
                         {
                             labelPressure.Invoke((MethodInvoker)(() => labelPressure.Text = String.Format("{0:#000.0}", MonDeviceDST.DstData.value) + "hPa"));
                         }
-                        Console.Write(MonDeviceDST.DstData.parameter +"= ");
+                        Console.Write(MonDeviceDST.DstData.parameter + "= ");
                         Console.Write(String.Format("{0:#.00}", MonDeviceDST.DstData.value));
                         Console.WriteLine(" " + str);
                     }
@@ -112,22 +122,20 @@ namespace WindowsFormsAppKcoTestSsh
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             //pictureBoxMagneto.Refresh();
-            GAngle.DessineLeFond();
-            GCompass.DessineLeFond();
+            //GAngle.DessineLeFond();
+            //GCompass.DessineLeFond();
             //GCompass.DessineLeFond((float)trackBar1.Value);
-
-            
         }
 
         private void pictureBoxMagneto_Paint(object sender, PaintEventArgs e)
         {
             //GCompass.DessineLeFond((float)trackBar1.Value);
-            GCompass.DessineLeFond();
+            //GCompass.DessineLeFond();
         }
 
         private void pictureBoxAngle_Paint(object sender, PaintEventArgs e)
         {
-            GAngle.DessineLeFond();
+            //GAngle.DessineLeFond();
         }
     }
 
